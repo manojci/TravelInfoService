@@ -15,8 +15,6 @@ public class Route {
     private Long id;
     private String origin;
     private String destination;
-    private Date departureTime;
-    private Date arrivalTime;
     private Date createdDate;
     private Date updatedDate;
 
@@ -46,22 +44,6 @@ public class Route {
 		this.destination = destination;
 	}
 
-	public Date getDepartureTime() {
-		return departureTime;
-	}
-
-	public void setDepartureTime(Date departureTime) {
-		this.departureTime = departureTime;
-	}
-
-	public Date getArrivalTime() {
-		return arrivalTime;
-	}
-
-	public void setArrivalTime(Date arrivalTime) {
-		this.arrivalTime = arrivalTime;
-	}
-
 	public Date getCreatedDate() {
 		return createdDate;
 	}
@@ -78,13 +60,11 @@ public class Route {
 		this.updatedDate = updatedDate;
 	}
 
-	public Route(Long id, String origin, String destination, Date departureTime, Date arrivalTime, Date createdDate, Date updatedDate) {
+	public Route(Long id, String origin, String destination, Date createdDate, Date updatedDate) {
 		super();
 		this.id = id;
 		this.origin = origin;
 		this.destination = destination;
-		this.departureTime = departureTime;
-		this.arrivalTime = arrivalTime;
 		this.createdDate = createdDate;
 		this.updatedDate = updatedDate;
 	}
