@@ -56,8 +56,8 @@ public class TravelDetailsServiceApplication {
 	@Bean
 	public CommandLineRunner demo(FlightRepository FlightRepository,RouteRepository routeRepository,FaresRepository faresRepository) {
 		return (args) -> {
-			routeRepository.save(new Route(1L,"Chennai","Madurai",new Date(),null));
-			routeRepository.save(new Route(2L,"Madurai","Chennai",new Date(),null));
+			routeRepository.save(new Route(1L,"Chennai","Madurai",new Date(),null,"Y"));
+			routeRepository.save(new Route(2L,"Madurai","Chennai",new Date(),null,"Y"));
 			// save a couple of flights
 			faresRepository.save(new Fare(1L, 1, 1, new Date(), new Date(), 2500.00));
 			faresRepository.save(new Fare(2L, 1, 2, new Date(), new Date(), 1900.00));

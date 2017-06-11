@@ -17,6 +17,7 @@ public class Route {
     private String destination;
     private Date createdDate;
     private Date updatedDate;
+    private String activeFlag;
 
     protected Route() {}
 
@@ -60,13 +61,27 @@ public class Route {
 		this.updatedDate = updatedDate;
 	}
 
-	public Route(Long id, String origin, String destination, Date createdDate, Date updatedDate) {
+	public String getActiveFlag() {
+		return activeFlag;
+	}
+
+	public void setActiveFlag(String activeFlag) {
+		this.activeFlag = activeFlag;
+	}
+
+	public Route(Long id, String origin, String destination, Date createdDate, Date updatedDate, String activeFlag) {
 		super();
 		this.id = id;
 		this.origin = origin;
 		this.destination = destination;
 		this.createdDate = createdDate;
 		this.updatedDate = updatedDate;
+		this.activeFlag = activeFlag;
 	}
 
+	@Override
+	public String toString() {
+		return "Route [id=" + id + ", origin=" + origin + ", destination=" + destination + ", createdDate="
+				+ createdDate + ", updatedDate=" + updatedDate + ", activeFlag=" + activeFlag + "]";
+	}
 }
